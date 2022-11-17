@@ -49,6 +49,7 @@ export const ExportDialogContent = ({ clips }: Props) => {
 
   const googleLogin = useGoogleLogin({
     scope: 'https://www.googleapis.com/auth/spreadsheets',
+    overrideScope: true,
     onSuccess: async (response) => {
       const accessToken = response.access_token;
       const spreadsheetId = fetchSpreadsheetIdFromUrl(url);
