@@ -1,8 +1,9 @@
 import { TwitchClipPicker } from '../components/TwitchClipPicker'
-import { Container, Typography } from '@mui/material';
+import { Container, Divider, Typography } from '@mui/material';
 import { Stack } from '@mui/system';
 import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
 import { LocalizationProvider } from '@mui/x-date-pickers';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -13,6 +14,12 @@ export default function Home() {
           Twitch Clips Picker
           </Typography>
           <TwitchClipPicker />
+          <Divider />
+          <Typography variant='body2'>
+            <Link href='/privacy-policy'>
+              プライバシーポリシー
+            </Link>
+          </Typography>
         </Stack>
       </Container>
     </LocalizationProvider>
